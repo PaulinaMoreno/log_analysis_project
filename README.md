@@ -11,7 +11,7 @@ This reporting tool is a Python program using the psycopg2 module to connect to 
 --------
 1. Clone the template project, replacing my-project with the name of the project you are creating:
 ```
-git clone --- my-project
+git clone https://github.com/PaulinaMoreno/log_analysis_project.git my-project
 cd my-project
 ```
 2. Create the *news* database:
