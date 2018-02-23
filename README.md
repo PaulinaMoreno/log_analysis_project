@@ -11,18 +11,18 @@ This reporting tool is a Python program using the psycopg2 module to connect to 
 --------
 1. Clone the template project, replacing my-project with the name of the project you are creating:
 ```
-git clone --- my-project
+git clone https://github.com/PaulinaMoreno/log_analysis_project.git my-project
 cd my-project
 ```
 2. Create the *news* database:
-  1. Create a new PostgreSQL database:
+   1. Create a new PostgreSQL database:
+      ```
+      CREATE DATABASE news;
+      ```
+   2. You will need newsdata.zip file *(unzip this file, the file inside is called newsdata.sql)* to load data into *news* database, to load the data use the command:
     ```
-    CREATE DATABASE news;
+      psql -d news -f newsdata.sql.
     ```
-  2. You will need newsdata.zip file *(unzip this file, the file inside is called newsdata.sql)* to load data into *news* database, to load the data use the command:
-  ```
-    psql -d news -f newsdata.sql.
-  ```
 3. Run log_analysis_tool.py file :
   ```
   python log_analysis_tool.py
