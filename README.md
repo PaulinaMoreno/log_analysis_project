@@ -19,10 +19,21 @@ cd my-project
       ```
       CREATE DATABASE news;
       ```
-   2. You will need newsdata.zip file *(unzip this file, the file inside is called newsdata.sql)* to load data into *news* database, to load the data use the command:
-    ```
-      psql -d news -f newsdata.sql.
-    ```
+   2. You will need newsdata.zip file *(unzip this file, the file inside is called newsdata.sql)* to load data into *news*          database, to load the data use the command:
+       ```
+         psql -d news -f newsdata.sql.
+       ```
+    3. You need to create the next view in news database:
+         ```
+         CREATE VIEW most_accessed as
+         SELECT path,
+         count(*) AS views
+         FROM log
+         WHERE tatus = '200 OK'
+         GROUP path
+         ORDER BY views;
+       ```
+
 3. Run log_analysis_tool.py file :
   ```
   python log_analysis_tool.py
