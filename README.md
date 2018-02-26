@@ -30,7 +30,7 @@ cd my-project
          count(*) AS views
          FROM log
          WHERE status = '200 OK'
-         GROUP by path
+         GROUP BY path
          ORDER BY views;
        ```
 
