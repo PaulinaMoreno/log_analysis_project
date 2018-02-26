@@ -29,7 +29,7 @@ cd my-project
          SELECT path,
          count(*) AS views
          FROM log
-         WHERE tatus = '200 OK'
+         WHERE status = '200 OK'
          GROUP path
          ORDER BY views;
        ```
