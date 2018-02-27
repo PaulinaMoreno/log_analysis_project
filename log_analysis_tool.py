@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 from log_db import popular_articles, popular_authors, perc_errors
 from time import sleep
 import operator
