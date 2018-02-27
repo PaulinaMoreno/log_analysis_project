@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import datetime
 import psycopg2
 DBNAME = "news"
@@ -9,7 +10,7 @@ def popular_articles():
     try:
         conn = psycopg2.connect(database=DBNAME)
     except:
-        print ("I am unable to connect to the database.")
+        print("I am unable to connect to the database.")
     cur = conn.cursor()
     sql = """
         SELECT title, views FROM articles, most_accessed
@@ -55,7 +56,7 @@ def perc_errors():
     try:
         conn = psycopg2.connect(database=DBNAME)
     except:
-        print ("I am unable to connect to the database.")
+        print("I am unable to connect to the database.")
     cur = conn.cursor()
     cur.execute(sql)
     perc_errors = cur.fetchall()
