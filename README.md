@@ -6,6 +6,8 @@ This reporting tool is a Python program using the psycopg2 module to connect to 
 ## Requirements
 * Python versions (2.x or 3.x) with psycopg2 installed .
 * Postgresql [https://www.postgresql.org/download/]
+* VirtualBox [https://www.virtualbox.org/wiki/Download_Old_Builds_5_1]
+* Vagrant [https://www.vagrantup.com/]
 
 ## Install
 --------
@@ -15,7 +17,7 @@ git clone https://github.com/PaulinaMoreno/log_analysis_project.git my-project
 cd my-project
 ```
 2. Create the *news* database:
-   1. Create a new PostgreSQL database:
+   1. Use ***psql*** command-line tool and create a new PostgreSQL database:
       ```
       CREATE DATABASE news;
       ```
